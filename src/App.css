@@ -1,0 +1,166 @@
+:root {
+  --bg: #ffddee;
+  --window: #ffffff;
+  --border: #1e1e1e;
+  --soft: #f6f6f6;
+  --text: #111;
+  --muted: #6b6b6b;
+  --shadow: 8px 8px 0px rgba(0, 0, 0, 0.9);
+  --radius: 16px;
+  --pink: #ff5fa2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.desktop {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+}
+
+.window {
+  width: min(800px, 100%);
+  margin-bottom: 40px;
+  background: var(--window);
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.section-title {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 3px solid var(--border);
+  border-radius: 14px;
+  background: var(--pink);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.cookie-container {
+  text-align: center;
+}
+
+.cookie-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.cookie-btn img {
+  width: 150px;
+}
+
+.cookie-btn img {
+  width: 150px;
+  transition: transform 0.1s ease;
+}
+
+.cookie-btn img.clicked {
+  animation: cookiePop 0.25s ease;
+}
+
+@keyframes cookiePop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.score {
+  font-weight: 800;
+  margin-top: 14px;
+  font-size: 18px;
+  padding: 12px;
+  border: 3px solid var(--border);
+  border-radius: 14px;
+  background: var(--pink);
+  font-weight: 800;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.9);
+}
+
+.simple-list {
+  display: grid;
+  gap: 10px;
+}
+
+.simple-list p,
+.simple-list li {
+  margin: 0;
+  padding: 8px 12px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: var(--soft);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.9);
+}
+
+.form {
+  margin-top: 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.form input {
+  padding: 12px;
+  border: 3px solid var(--border);
+  border-radius: 14px;
+  font-size: 14px;
+  background: white;
+}
+
+.form button {
+  padding: 12px;
+  border: 3px solid var(--border);
+  border-radius: 14px;
+  background: var(--pink);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.9);
+}
+
+.form button:hover {
+  transform: translateY(-2px);
+}
+
+.status {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.Reset-btn {
+  padding: 12px;
+  border: 3px solid var(--border);
+  border-radius: 14px;
+  background: var(--pink);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.9);
+}
